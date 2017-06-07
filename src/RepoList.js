@@ -1,13 +1,19 @@
 import React, {Component} from 'react';
 import RepoFilter from './RepoFilter';
+import {string} from 'prop-types';
 
-export default class RepoList extends Component {
+class RepoList extends Component {
+    state {filterChoice: ''}
+    handleFilterChoice = (event) => {
+        this.setState({filterChoice: event.target.value})
+    }
+
     render() {
         return (
             <div className="row">
-                <h1>Brandon's Repositories</h1>
+                <h1>User's Name Repositories</h1>
                 <p>Filter repos by primary language</p>
-                <RepoFilter/>
+                <RepoFilter onClick={this.handleFilterChoice}/>
                 <table className="table">
                     <thead>
                         <tr>
@@ -36,3 +42,8 @@ export default class RepoList extends Component {
         );
     }
 }
+RepoList.propTypes = {
+    filterChoice: string.isRequired
+}
+
+export default RepoList
