@@ -19,13 +19,13 @@ Please write your answer [here](./map.js)
 2. What is a React `component`?
 
 ---
-> Your answer here...
+A React component at a high level is a puzzle piece of a whole web application puzzle board. Lower level it is a container for rendering javascript as html. Self containining and reuseable. 
 ---
 
 3. You can define a React component a few different ways, including (1) as a simple function or (2) as a class that extends the `Component` piece of the React library. How should you decide when to use which syntax?
 
 ---
-> Your answer here...
+A simple function would be used as a component if it is just rendering content. When there is a dynamic element needed, meaning it has a state, a class that extends the 'Component' would be best to use. 
 ---
 
 4. Please transpile the following JSX code into JavaScript that the browser can understand:
@@ -37,7 +37,16 @@ Please write your answer [here](./map.js)
 ```
 
 ---
-> Your answer here...
+renderReact=()=> {
+            ReactDOM.render(
+                React.createElement(
+                    'div', {
+                        className: 'headline'
+                    },
+                    React.createElement('h1', null, 'Hello Dojo!'),
+                ),
+                reactContainer);
+        }
 ---
 
 5. Reverse an array. Write a function that accepts an array and returns *the same array* with the values reversed.
@@ -53,7 +62,7 @@ Please write your answer [here](./reverseArr.js)
 6. How does using the `new` keyword affect a function's behavior in JavaScript?
 
 ---
-> Your answer here...
+'new' refers to creating a new instance in memory. Such has I want to create a new array therefore memory space needs to be allocated.
 ---
 
 7. What is the best thing?
@@ -63,7 +72,7 @@ Please write your answer [here](./reverseArr.js)
 * D) Pushing to Github
 
 ---
-> Your answer here...
+All these choices are pretty good but I am partial to Callbacks at this point. Promises is a close second. 
 ---
 
 Done! Time to start the [React app](./app-details.md)!
